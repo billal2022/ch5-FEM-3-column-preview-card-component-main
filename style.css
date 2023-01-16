@@ -1,0 +1,137 @@
+:root{
+    /* background colors of cards*/
+    --orange:hsl(31, 77%, 52%);
+    --dark-cyan:hsl(184, 100%, 22%);
+    --very-dark-cyan:hsl(179, 100%, 13%);
+    /* paragraph colors*/
+    --paragraph:hsla(0, 0%, 100%, 0.75);
+    --very-lightgray:hsl(0, 0%, 95%);
+    /* font style*/
+    --font-style-bot:'Inter', sans-serif;
+    --font-style-middle:'Lexend Deca', sans-serif;;
+    --font-family-head:'Big Shoulders Display', cursive;
+    /*icon sizes*/
+    --icon-size:32px;
+    /* padding cards*/
+    --padding:40px;
+    /* margin*/
+    --margin-title:25px;
+    --margin-paragraph:70px;
+}
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0px 205px;
+    
+}
+/* the whole card*/
+.main-box{
+    display: grid;
+    grid: auto/ 1fr 1fr 1fr;
+    border-radius: 30px;
+    overflow: hidden;
+    
+}
+/*the left card */
+ .first-card{
+background-color: var(--orange);
+padding: var(--padding);
+border-top-left-radius:6px;
+border-bottom-left-radius:6px;
+ }
+ /*the midddle card */
+ .second-card{
+background-color: var(--dark-cyan);
+padding: var(--padding);
+ }
+ /*the right card */
+ .third-card{
+background-color: var(--very-dark-cyan);
+padding: var(--padding);
+border-top-right-radius:6px;
+border-bottom-right-radius:6px;
+ }
+ /* first icon*/
+ .icon-icon-sedans .path1:before {
+    content: "\e905";
+    color: #000;
+    opacity: 0.2010;
+    font-size: var(--icon-size);
+  }
+  .icon-icon-sedans .path2:before {
+    content: "\e906";
+    color: #ffd473;
+    margin-left: -1.599609375em;
+    font-size: var(--icon-size);
+  }
+  /* second icon*/
+  .icon-icon-suvs .path1:before {
+    content: "\e903";
+    color: #000;
+    opacity: 0.2010;
+    font-size: var(--icon-size);
+    margin-bottom: var(--margin-icon);
+  }
+  .icon-icon-suvs .path2:before {
+    content: "\e904";
+    color: #26b5c0;
+    margin-left: -1.599609375em;
+    font-size: var(--icon-size);
+  }
+  /* third icon */
+  .icon-icon-luxury .path1:before {
+    content: "\e907";
+    color: #000;
+    opacity: 0.2010;
+    font-size: var(--icon-size);
+  }
+  .icon-icon-luxury .path2:before {
+    content: "\e908";
+    color: #19b89d;
+    margin-left: -1.599609375em;
+    font-size: var(--icon-size);
+  }
+ /* title */
+.head{
+    font-family: var(--font-family-head);
+    color: var(--very-lightgray);
+    margin-bottom:var(--margin-title);
+    margin-top: 26px;
+    text-transform: uppercase;
+}
+ /* paragraph */
+.middle{
+    font-family: var(--font-style-middle);
+    color: var(--paragraph);
+    margin-bottom:var(--margin-paragraph);
+    font-size: 15px;
+    line-height: 1.6;
+}
+ /* buttons */
+ .bottom{
+    position: relative;
+    font-family: var(--font-style-middle);
+    border: 0;
+    border-radius: 40px;
+    padding: 10px 22px;
+    background-color: var(--very-lightgray);
+    cursor: pointer;
+    text-transform: capitalize;
+    mix-blend-mode:screen;
+ }
+
+ @media (max-width:900px){
+.main-box{
+    grid:auto/ 1fr;
+    width: 400px;
+}
+
+
+ }
